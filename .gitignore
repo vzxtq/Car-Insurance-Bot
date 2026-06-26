@@ -62,7 +62,7 @@ appsettings.*.json
 !appsettings.example.json
 !appsettings.*.example.json
 secrets.json
-Properties/launchSettings.json
+**/Properties/launchSettings.json
 
 # Docker local overrides
 *.dcproj
