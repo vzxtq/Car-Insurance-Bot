@@ -20,7 +20,7 @@ public sealed class BotBackgroundService : BackgroundService
         _logger = logger;
     }
 
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    protected override async Task ExecuteAsync(CancellationToken cancellationToken)
     {
         var receiverOptions = new ReceiverOptions { AllowedUpdates = [] };
 
@@ -28,9 +28,9 @@ public sealed class BotBackgroundService : BackgroundService
             updateHandler: _handler.HandleUpdateAsync,
             pollingErrorHandler: _handler.HandleErrorAsync,
             receiverOptions: receiverOptions,
-            cancellationToken: stoppingToken);
+            cancellationToken: cancellationToken);
 
-        var botInfo = await _botClient.GetMeAsync(stoppingToken);
+        var botInfo = await _botClient.GetMeAsync(cancellationToken);
 
         _logger.LogInformation("Bot @{Username} is running", botInfo.Username);
     }
