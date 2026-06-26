@@ -1,18 +1,88 @@
-bin/
-obj/
+# Build output
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
 
-*.user
-*.suo
+# .NET / NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+project.lock.json
+project.assets.json
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.g.targets
+*.assets.cache
+*.AssemblyReference.cache
+*.CoreCompileInputs.cache
+*.FileListAbsolute.txt
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.GlobalUsings.g.cs
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.sourcelink.json
+*.genruntimeconfig.cache
+*.Up2Date
+*.ncrunch*
+TestResult*/
+TestResults/
+coverage/
+coverage.*
+*.coverage
+*.coveragexml
+
+# Visual Studio / Rider / ReSharper
 .vs/
-.idea/
 .vscode/
+.idea/
+_ReSharper*/
+*.DotSettings.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.userprefs
 
+# Local configuration and secrets
 .env
 .env.*
+*.env
 appsettings.json
 appsettings.*.json
 !appsettings.example.json
 !appsettings.*.example.json
-
+secrets.json
 Properties/launchSettings.json
-publish/
+
+# Docker local overrides
+*.dcproj
+*.dockerignore.user
+docker-compose.override.yml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.cache
+*.pid
+*.bak
+*.swp
+*.orig
+*.pdb
+*.ilk
+*.idb
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
